@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #0ddff2;
+  --color-primary-dim: #0aaebf;
+  --color-background-light: #f5f8f8;
+  --color-background-dark: #102122;
+  --color-terminal-text: #c4d8c9;
+
+  --font-display: var(--font-space-grotesk), monospace;
+  --font-mono: "Courier New", Courier, monospace;
+
+  --shadow-neon: 0 0 5px #0ddff2, 0 0 10px #0ddff2;
+  --shadow-neon-sm: 0 0 2px #0ddff2, 0 0 4px #0ddff2;
+
+  --image-hazard-stripes: repeating-linear-gradient(45deg, transparent, transparent 10px, #0ddff2 10px, #0ddff2 12px);
+  --image-scanlines: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+}
+
+@layer base {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-slate-200 dark:bg-[#102122];
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        @apply border-2 border-slate-200 dark:border-[#102122];
+    }
+    ::selection {
+        background-color: var(--color-primary);
+        color: var(--color-background-dark);
+    }
+
+    body {
+        @apply bg-[#f5f8f8] text-slate-900 dark:bg-[#102122] dark:text-[#c4d8c9];
+        font-family: var(--font-display);
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+}
+
+@layer utilities {
+    .clip-shard-1 {
+        clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    }
+    .clip-shard-2 {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    }
+    .clip-shard-button {
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    }
+    .clip-shard-card {
+        clip-path: polygon(0 0, 95% 5%, 100% 100%, 5% 95%);
+    }
+
+    .glitch-text {
+        text-shadow: 2px 0 #0ddff2, -2px 0 #ff00ea;
+    }
+
+    .text-vertical-rl {
+        writing-mode: vertical-rl;
+    }
+
+    .bg-scanlines {
+        background-image: var(--image-scanlines);
+    }
+    .scanlines {
+        background-size: 100% 4px;
+        pointer-events: none;
+    }
+
+    .text-stroke-primary {
+        -webkit-text-stroke: 1px var(--color-primary);
+    }
+
+    .mask-linear-fade {
+        -webkit-mask-image: linear-gradient(135deg, black 40%, transparent 80%);
+        mask-image: linear-gradient(135deg, black 40%, transparent 80%);
+    }
+}
