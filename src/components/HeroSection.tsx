@@ -15,7 +15,7 @@ export default function HeroSection() {
                 aria-label="Core capabilities"
                 className="relative border border-primary/40 bg-primary/5 px-4 py-3 clip-shard-2"
             >
-                <p className="text-[10px] uppercase tracking-[0.25em] text-slate-600 dark:text-slate-400 mb-3">System Focus</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400 mb-3">System Focus</p>
                 <ul className="space-y-2 text-xs uppercase tracking-[0.16em] text-primary">
                     <li>Web Performance</li>
                     <li>Secure Architecture</li>
