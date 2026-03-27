@@ -1,5 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
+
+const RESUME_PATH = '/resume.pdf';
+const DOWNLOAD_RESUME_CLASS_NAME =
+  'w-fit inline-flex items-center gap-2 text-primary text-xs font-bold tracking-widest hover:bg-primary hover:text-white dark:hover:text-black transition-colors mt-2 group clip-shard-button border border-primary px-6 py-3 bg-slate-100 dark:bg-black/50';
 
 export default function HeroSection() {
   return (
@@ -7,29 +12,7 @@ export default function HeroSection() {
         {/* Decorative line */}
         <div className="absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
 
-        <div className="grid gap-8 md:grid-cols-[220px_1fr] items-start">
-            <motion.aside
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 }}
-                aria-label="Core capabilities"
-                className="relative border border-primary/40 bg-primary/5 px-4 py-3 clip-shard-2"
-            >
-                <p className="text-sm uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400 mb-3">System Focus</p>
-                <ul className="space-y-2 text-xs uppercase tracking-[0.16em] text-primary">
-                    <li>Web Performance</li>
-                    <li>Secure Architecture</li>
-                    <li>Scalable APIs</li>
-                    <li>Modern UI Engineering</li>
-                </ul>
-                <motion.div
-                    initial={{ opacity: 0.4 }}
-                    animate={{ opacity: [0.4, 1, 0.4] }}
-                    transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-                    className="mt-4 h-[2px] w-full bg-primary/70"
-                />
-            </motion.aside>
-
+        <div className="grid gap-8 md:grid-cols-[1fr_220px] items-start">
             <div>
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
@@ -51,12 +34,39 @@ export default function HeroSection() {
                         Building high-performance, secure, and scalable web applications. Transforming complex problems into elegant digital solutions.
                     </p>
 
-                    <a href="#projects" className="w-fit bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-white dark:hover:text-black font-bold uppercase text-xs px-8 py-3 tracking-[0.2em] transition-all active:translate-y-0.5 flex items-center gap-2 group clip-shard-button">
-                        <span>VIEW WORK</span>
-                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    <a
+                        href={RESUME_PATH}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={DOWNLOAD_RESUME_CLASS_NAME}
+                    >
+                        <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
+                        <span>DOWNLOAD RESUME</span>
                     </a>
                 </motion.div>
             </div>
+
+            <motion.aside
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.15 }}
+                aria-label="Live capability signals"
+                className="relative border border-primary/40 bg-primary/5 px-4 py-3 clip-shard-2 md:mt-10"
+            >
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400 mb-3">Live Signals</p>
+                <ul className="space-y-2 text-xs uppercase tracking-[0.16em] text-primary">
+                    <li>SEO Ready Interfaces</li>
+                    <li>Accessible Components</li>
+                    <li>API Driven Systems</li>
+                    <li>Retro Inspired UX</li>
+                </ul>
+                <motion.div
+                    initial={{ opacity: 0.4 }}
+                    animate={{ opacity: [0.4, 1, 0.4] }}
+                    transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+                    className="mt-4 h-[2px] w-full bg-primary/70"
+                />
+            </motion.aside>
         </div>
     </section>
   );
