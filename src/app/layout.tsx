@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Faisal Ahmad" }],
   openGraph: {
     type: "website",
-    url: "https://fabsfolio.vercel.app", // Replace with actual URL
+    url: "https://fabsfolio.me", // Replace with actual URL
     title: "Faisal Ahmad - Full Stack Developer",
     description: "Building high-performance, secure, and scalable web applications.",
     siteName: "Faisal Ahmad Portfolio",
@@ -38,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="Slf9UPbkkYdYz3P775gHAVNfyPNEoo_cXoYeS0LB_bU" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
