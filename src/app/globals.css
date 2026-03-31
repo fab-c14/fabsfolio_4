@@ -20,15 +20,13 @@
 }
 
 @layer base {
-    ::-webkit-scrollbar {
-        width: 8px;
+    /* Hide scrollbar but keep scroll functionality */
+    html {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
     }
-    ::-webkit-scrollbar-track {
-        @apply bg-slate-200 dark:bg-[#102122];
-    }
-    ::-webkit-scrollbar-thumb {
-        background: var(--color-primary);
-        @apply border-2 border-slate-200 dark:border-[#102122];
+    html::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
     }
     ::selection {
         background-color: var(--color-primary);
@@ -36,7 +34,7 @@
     }
 
     body {
-        @apply bg-[#f5f8f8] text-slate-900 dark:bg-[#102122] dark:text-[#c4d8c9];
+        @apply bg-[#f5f8f8] text-black dark:bg-[#102122] dark:text-white;
         font-family: var(--font-display);
         transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,4 +80,119 @@
         -webkit-mask-image: linear-gradient(135deg, black 40%, transparent 80%);
         mask-image: linear-gradient(135deg, black 40%, transparent 80%);
     }
+}
+
+/* ===== Glitch — horizontal slice tear ===== */
+
+/* Each slice shows a horizontal strip and shifts it sideways */
+@keyframes glitch-slice-1 {
+    0%, 100% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    15%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    16%  { clip-path: inset(5% 0 85% 0); transform: translate(6px, 0); }
+    17%  { clip-path: inset(5% 0 85% 0); transform: translate(-4px, 0); }
+    18%  { clip-path: inset(5% 0 85% 0); transform: translate(8px, 0); }
+    19%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    62%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    63%  { clip-path: inset(8% 0 82% 0); transform: translate(-6px, 0); }
+    64%  { clip-path: inset(8% 0 82% 0); transform: translate(5px, 0); }
+    65%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+}
+
+@keyframes glitch-slice-2 {
+    0%, 100% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    15.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    16.5% { clip-path: inset(20% 0 65% 0); transform: translate(-8px, 0); }
+    17.5% { clip-path: inset(20% 0 65% 0); transform: translate(5px, 0); }
+    18.5% { clip-path: inset(20% 0 65% 0); transform: translate(-10px, 0); }
+    19.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    62.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    63.5% { clip-path: inset(22% 0 60% 0); transform: translate(7px, 0); }
+    64.5% { clip-path: inset(22% 0 60% 0); transform: translate(-8px, 0); }
+    65.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+}
+
+@keyframes glitch-slice-3 {
+    0%, 100% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    16%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    17%  { clip-path: inset(42% 0 45% 0); transform: translate(10px, 0); }
+    17.5% { clip-path: inset(42% 0 45% 0); transform: translate(-6px, 0); }
+    18%  { clip-path: inset(42% 0 45% 0); transform: translate(4px, 0); }
+    19%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    63%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    64%  { clip-path: inset(38% 0 48% 0); transform: translate(-9px, 0); }
+    64.5% { clip-path: inset(38% 0 48% 0); transform: translate(6px, 0); }
+    65%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+}
+
+@keyframes glitch-slice-4 {
+    0%, 100% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    16.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    17%  { clip-path: inset(60% 0 25% 0); transform: translate(-7px, 0); }
+    18%  { clip-path: inset(60% 0 25% 0); transform: translate(9px, 0); }
+    18.5% { clip-path: inset(60% 0 25% 0); transform: translate(-5px, 0); }
+    19.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    63.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    64%  { clip-path: inset(62% 0 22% 0); transform: translate(8px, 0); }
+    65%  { clip-path: inset(62% 0 22% 0); transform: translate(-7px, 0); }
+    65.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+}
+
+@keyframes glitch-slice-5 {
+    0%, 100% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    16%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    17.5% { clip-path: inset(80% 0 8% 0); transform: translate(6px, 0); }
+    18%  { clip-path: inset(80% 0 8% 0); transform: translate(-10px, 0); }
+    19%  { clip-path: inset(80% 0 8% 0); transform: translate(3px, 0); }
+    19.5% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    63%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+    63.5% { clip-path: inset(78% 0 10% 0); transform: translate(-5px, 0); }
+    64.5% { clip-path: inset(78% 0 10% 0); transform: translate(8px, 0); }
+    65%  { clip-path: inset(0 0 100% 0); transform: translate(0); }
+}
+
+/* Red/cyan color bleed that appears during tear */
+@keyframes glitch-color-bleed {
+    0%, 100% { opacity: 0; }
+    15% { opacity: 0; }
+    16% { opacity: 0.4; }
+    19% { opacity: 0.4; }
+    20% { opacity: 0; }
+    62% { opacity: 0; }
+    63% { opacity: 0.35; }
+    65.5% { opacity: 0.35; }
+    66.5% { opacity: 0; }
+}
+
+/* Sweep bar */
+@keyframes glitch-sweep {
+    0%, 100% { top: -10%; opacity: 0; }
+    15% { top: -10%; opacity: 0; }
+    16% { top: 10%; opacity: 0.5; }
+    19% { top: 85%; opacity: 0.2; }
+    20% { top: 110%; opacity: 0; }
+    62% { top: -10%; opacity: 0; }
+    63% { top: 15%; opacity: 0.4; }
+    65.5% { top: 90%; opacity: 0.15; }
+    67% { top: 110%; opacity: 0; }
+}
+
+.glitch-s1 { animation: glitch-slice-1 16s steps(1, end) infinite; }
+.glitch-s2 { animation: glitch-slice-2 16s steps(1, end) infinite; }
+.glitch-s3 { animation: glitch-slice-3 16s steps(1, end) infinite; }
+.glitch-s4 { animation: glitch-slice-4 16s steps(1, end) infinite; }
+.glitch-s5 { animation: glitch-slice-5 16s steps(1, end) infinite; }
+.glitch-color-bleed { animation: glitch-color-bleed 16s linear infinite; }
+.glitch-sweep-bar { animation: glitch-sweep 16s linear infinite; }
+
+/* On hover — freeze, hide all glitch layers */
+.glitch-container:hover .glitch-s1,
+.glitch-container:hover .glitch-s2,
+.glitch-container:hover .glitch-s3,
+.glitch-container:hover .glitch-s4,
+.glitch-container:hover .glitch-s5,
+.glitch-container:hover .glitch-color-bleed,
+.glitch-container:hover .glitch-sweep-bar {
+    animation-play-state: paused;
+    clip-path: inset(0 0 100% 0) !important;
+    opacity: 0 !important;
 }

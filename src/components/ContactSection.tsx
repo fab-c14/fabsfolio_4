@@ -47,11 +47,11 @@ export default function ContactSection() {
             OPEN FOR OPPORTUNITIES
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white tracking-tight">
             Ready to build something <span className="text-primary glitch-text">amazing</span>?
           </h2>
 
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-black/70 dark:text-white/80 max-w-2xl mx-auto leading-relaxed">
             I&apos;m currently available for freelance work and full-time positions.
             If you have a project that needs some creative touch, or just want to say hi, feel free to reach out!
           </p>
@@ -74,7 +74,7 @@ export default function ContactSection() {
               <div className={`p-4 rounded-full bg-slate-100 dark:bg-slate-800 group-hover:bg-primary/10 transition-colors`}>
                 <link.icon size={24} className={`text-slate-600 dark:text-slate-400 ${link.color} transition-colors duration-300`} />
               </div>
-              <span className="font-mono text-sm font-bold text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">
+              <span className="font-mono text-sm font-bold text-black/70 dark:text-white/80 group-hover:text-primary transition-colors">
                 {link.name}
               </span>
             </a>

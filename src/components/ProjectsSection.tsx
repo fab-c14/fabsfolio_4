@@ -53,7 +53,7 @@ export default function ProjectsSection() {
                 <div className="w-12 h-12 bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary clip-shard-1">
                     <FolderOpen size={24} className="text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold text-slate-800 dark:text-white glitch-text">PROJECTS</h2>
+                <h2 className="text-3xl font-bold text-black dark:text-white glitch-text">PROJECTS</h2>
                 <div className="h-[1px] flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
             </div>
 
@@ -87,10 +87,10 @@ export default function ProjectsSection() {
                         <div className="w-full md:w-2/5 flex flex-col items-start space-y-4">
                             <div className="flex items-center gap-2">
                                 <span className="text-primary font-bold text-lg">0{index + 1}.</span>
-                                <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                                <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
                             </div>
                             <span className="text-xs font-mono text-primary/70 uppercase tracking-widest">{project.subtitle}</span>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
+                            <p className="text-black/70 dark:text-white/80 leading-relaxed text-sm md:text-base">
                                 {project.description}
                             </p>
 
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-4 flex items-center gap-2 text-slate-800 dark:text-white font-bold text-sm hover:text-primary transition-colors border-b border-primary/30 hover:border-primary pb-1 group/link"
+                                className="mt-4 flex items-center gap-2 text-black dark:text-white font-bold text-sm hover:text-primary transition-colors border-b border-primary/30 hover:border-primary pb-1 group/link"
                             >
                                 <span>{project.linkText}</span>
                                 <project.icon size={16} className="group-hover/link:translate-x-1 transition-transform" />

@@ -76,8 +76,8 @@ export default function SkillsSection() {
               <Cpu className="text-primary" size={24} />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Technical <span className="text-primary">Arsenal</span></h2>
-              <p className="text-sm text-slate-500 dark:text-slate-400 font-mono mt-1">{'// CORE_COMPETENCIES'}</p>
+              <h2 className="text-3xl font-bold text-black dark:text-white tracking-tight">Technical <span className="text-primary">Arsenal</span></h2>
+              <p className="text-sm text-black/50 dark:text-white/50 font-mono mt-1">{'// CORE_COMPETENCIES'}</p>
             </div>
         </div>
 
@@ -93,7 +93,7 @@ export default function SkillsSection() {
                 >
                     <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
                         <category.icon className="text-primary" size={20} />
-                        <h3 className="font-bold text-slate-800 dark:text-white">{category.title}</h3>
+                        <h3 className="font-bold text-black dark:text-white">{category.title}</h3>
                     </div>
 
                     <div className="flex flex-wrap gap-3">
@@ -103,7 +103,7 @@ export default function SkillsSection() {
                                 className="flex items-center gap-2 bg-slate-50 dark:bg-slate-800 px-3 py-2 rounded-lg border border-slate-100 dark:border-slate-700 hover:border-primary/30 transition-colors cursor-default"
                             >
                                 <skill.icon size={14} className="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors" />
-                                <span className="text-xs font-mono font-bold text-slate-600 dark:text-slate-300">{skill.name}</span>
+                                <span className="text-xs font-mono font-bold text-black/70 dark:text-white/80">{skill.name}</span>
                             </div>
                         ))}
                     </div>

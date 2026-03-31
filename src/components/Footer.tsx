@@ -9,10 +9,10 @@ const Footer = () => {
 
         {/* Left Side */}
         <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
-          <p className="text-sm font-bold text-slate-700 dark:text-slate-300">
+          <p className="text-sm font-bold text-black/80 dark:text-white/80">
             2026 – Made With Acknowledgement of Heart by Faisal Farooq
           </p>
-          <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-500 font-mono">
+          <div className="flex items-center gap-2 text-xs text-black/40 dark:text-white/40 font-mono">
              <span>{'// END_OF_LINE'}</span>
              <span className="w-2 h-2 rounded-full bg-primary/50 animate-pulse"></span>
           </div>
@@ -20,7 +20,7 @@ const Footer = () => {
 
         {/* Right Side */}
         <div className="flex flex-col items-center md:items-end gap-3">
-          <p className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest">
+          <p className="text-xs font-bold text-black/60 dark:text-white/60 uppercase tracking-widest">
             Come On Give Me A Star GitHub
           </p>
           <a

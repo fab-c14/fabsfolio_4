@@ -16,11 +16,11 @@ const NavLink = ({ href, label, icon: Icon, onClick }: { href: string; label: st
         if (onClick) onClick();
       }
     }}
-    className="relative group flex items-center gap-2 px-4 py-2 text-sm font-bold tracking-widest text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors uppercase"
+    className="relative group flex items-center gap-2 px-4 py-2 text-sm font-bold tracking-widest text-black/60 dark:text-white/70 hover:text-primary dark:hover:text-primary transition-colors uppercase"
   >
     <span className="absolute inset-0 border border-transparent group-hover:border-primary/50 skew-x-[-10deg] transition-all duration-300"></span>
     <span className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 skew-x-[-10deg] transition-all duration-300"></span>
-    <Icon size={16} className="relative z-10" />
+    <Icon size={16} className="relative z-10 text-primary" />
     <span className="relative z-10">{label}</span>
   </a>
 );
@@ -44,8 +44,8 @@ const Header = () => {
           <Terminal size={20} className="text-primary" />
         </div>
         <div className="flex flex-col">
-          <span className="text-slate-800 dark:text-primary font-bold text-base tracking-[0.1em] leading-none uppercase">Faisal Ahmad</span>
-          <span className="text-[10px] text-slate-500 font-mono tracking-widest mt-1">FULL STACK DEV</span>
+          <span className="text-black dark:text-primary font-bold text-base tracking-[0.1em] leading-none uppercase">Faisal Ahmad</span>
+          <span className="text-[10px] text-black/50 dark:text-white/50 font-mono tracking-widest mt-1">FULL STACK DEV</span>
         </div>
       </div>
 
@@ -62,7 +62,7 @@ const Header = () => {
         {/* Theme Toggle */}
         <button
           onClick={toggleTheme}
-          className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-white/5 text-slate-600 dark:text-slate-400 transition-colors"
+          className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-white/5 text-black/60 dark:text-white/70 transition-colors"
           aria-label="Toggle Theme"
         >
           {mounted ? (theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />) : <div className="w-5 h-5 bg-slate-200 dark:bg-slate-800 rounded-full animate-pulse"></div>}
@@ -71,7 +71,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden w-10 h-10 border border-slate-300 dark:border-slate-700 hover:border-primary text-slate-600 dark:text-slate-400 hover:text-primary flex items-center justify-center transition-colors bg-transparent"
+          className="md:hidden w-10 h-10 border border-slate-300 dark:border-slate-700 hover:border-primary text-black/60 dark:text-white/70 hover:text-primary flex items-center justify-center transition-colors bg-transparent"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>

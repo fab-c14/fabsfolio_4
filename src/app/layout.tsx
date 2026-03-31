@@ -9,25 +9,50 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fabsfolio.me"),
   title: "Faisal Ahmad - Full Stack Developer",
   description: "Faisal Ahmad is a Full Stack Developer specializing in building high-performance, secure, and scalable web applications.",
+  applicationName: "Faisal Ahmad Portfolio",
   keywords: ["Full Stack Developer", "Web Developer", "React", "Next.js", "Node.js", "Faisal Ahmad", "Portfolio"],
-  authors: [{ name: "Faisal Ahmad" }],
+  authors: [{ name: "Faisal Ahmad", url: "https://fabsfolio.me" }],
+  creator: "Faisal Ahmad",
+  publisher: "Faisal Ahmad",
+  generator: "Next.js",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
-    url: "https://fabsfolio.me", // Replace with actual URL
+    url: "https://fabsfolio.me",
     title: "Faisal Ahmad - Full Stack Developer",
     description: "Building high-performance, secure, and scalable web applications.",
     siteName: "Faisal Ahmad Portfolio",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Faisal Ahmad - Full Stack Developer",
     description: "Building high-performance, secure, and scalable web applications.",
+    creator: "@yourtwitterhandle", // You can update this
   },
   icons: {
     icon: '/favicon.svg',
-  }
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
