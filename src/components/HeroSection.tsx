@@ -1,19 +1,26 @@
 'use client';
 import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
-// --- Static Terminal with interactive input ---
+// --- Interactive Command Terminal ---
 function RetroTerminal() {
   const [extraLines, setExtraLines] = useState<{ text: string; type: 'input' | 'output' | 'error' | 'ascii' }[]>([]);
   const [currentInput, setCurrentInput] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [extraLines]);
 
   const commands: Record<string, { lines: string[]; type: 'output' | 'ascii' }> = {
     help: {
       type: 'output',
       lines: [
         'Available commands:',
-        '  about      — who is faisal?',
+        '  about      — who is Faisal?',
         '  stack      — tech I work with',
         '  projects   — things I\'ve built',
         '  contact    — get in touch',
@@ -24,10 +31,10 @@ function RetroTerminal() {
     about: {
       type: 'output',
       lines: [
-        'Faisal Ahmad',
-        'Self-taught Full Stack Developer from India.',
-        'I build web apps from database to deploy.',
-        'Currently open to freelance & full-time roles.',
+        'Faisal Ahmad Bhat',
+        'Full Stack Developer & AI Engineer based in Srinagar, J&K.',
+        'Specializing in SaaS architectures and Gen AI integration.',
+        'Currently open to freelance contracts and remote roles.',
       ],
     },
     stack: {
@@ -35,6 +42,7 @@ function RetroTerminal() {
       lines: [
         'Frontend : React, Next.js, TypeScript, Tailwind',
         'Backend  : Node.js, Express, Python, FastAPI',
+        'Gen AI   : LLM Integration, RAG, OpenAI API, Prompts',
         'Database : MongoDB, PostgreSQL, MySQL, Redis',
         'DevOps   : AWS, Docker, Linux, Git',
       ],
@@ -43,9 +51,11 @@ function RetroTerminal() {
       type: 'output',
       lines: [
         '01. EverFeatured — Product discovery platform',
-        '02. FLAME        — Educational learning tool',
-        '03. PinToInbox   — Inbox management app',
-        '04. SkillFolio   — AI resume builder',
+        '02. ExpertMatter  — Consulting & B2B platform',
+        '03. AryanLakhani — Marketer portfolio website',
+        '04. FLAME        — Educational learning tool',
+        '05. PinToInbox   — Inbox management app',
+        '06. SkillFolio   — AI resume builder',
         '',
         'Type "contact" to discuss a project.',
       ],
@@ -67,10 +77,9 @@ function RetroTerminal() {
         '│         WHY YOU SHOULD HIRE ME      │',
         '├─────────────────────────────────────┤',
         '│ ✓ I ship fast and ship clean        │',
-        '│ ✓ Full stack — no handoffs needed   │',
-        '│ ✓ I care about the end user, not    │',
-        '│   just the code                     │',
-        '│ ✓ Available now for new projects    │',
+        '│ ✓ Full stack & Gen AI Integration   │',
+        '│ ✓ Based in Jammu and Kashmir        │',
+        '│ ✓ Available for remote contracts    │',
         '└─────────────────────────────────────┘',
       ],
     },
@@ -107,61 +116,62 @@ function RetroTerminal() {
 
   return (
     <div
-      className="bg-[#0a0a0a] border border-green-900/50 rounded-md overflow-hidden shadow-[0_0_30px_rgba(0,255,0,0.05)] font-mono text-xs"
+      className="bg-[#0a0a0a] border border-green-900/50 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(0,255,0,0.06)] dark:shadow-[0_0_30px_rgba(13,223,242,0.08)] font-mono text-xs w-full text-left cursor-text"
       onClick={() => inputRef.current?.focus()}
     >
       {/* Title Bar */}
-      <div className="flex items-center justify-between px-3 py-2 bg-[#111] border-b border-green-900/30">
+      <div className="flex items-center justify-between px-4 py-3 bg-[#111] border-b border-green-900/20">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
             <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></span>
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500/70"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500/70 animate-pulse"></span>
           </div>
-          <span className="text-green-600/60 text-[10px] ml-2 tracking-wider">terminal@fabc14~</span>
+          <span className="text-green-600/50 text-[10px] ml-2 tracking-wider">terminal@fabc14~</span>
         </div>
-        <span className="text-green-700/40 text-[9px] tracking-widest">TERMINAL</span>
+        <span className="text-green-700/40 text-[9px] tracking-widest uppercase">Console</span>
       </div>
 
-      {/* Scanline overlay */}
-      <div className="relative">
+      {/* Screen container with CRT flicker/fuzz effect */}
+      <div className="relative crt-flicker">
         <div className="absolute inset-0 pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.15)_2px,rgba(0,0,0,0.15)_4px)] z-10"></div>
 
         {/* Terminal Body */}
-        <div className="h-[260px] overflow-y-auto p-3 space-y-0.5 relative" style={{ scrollbarWidth: 'none' }}>
+        <div 
+          ref={scrollRef}
+          className="h-[250px] overflow-y-auto p-4 space-y-1 relative" 
+          style={{ scrollbarWidth: 'none' }}
+        >
+          <div className="text-green-400/80 leading-relaxed font-mono">{`> System ready.`}</div>
+          <div className="text-yellow-400/90 leading-relaxed font-mono">$ hire</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">┌─────────────────────────────────────┐</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">│         WHY YOU SHOULD HIRE ME      │</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">├─────────────────────────────────────┤</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">│ ✓ I ship fast and ship clean        │</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">│ ✓ Full stack & Gen AI Integration   │</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">│ ✓ Based in Jammu and Kashmir        │</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">│ ✓ Available for remote contracts    │</div>
+          <div className="text-primary/95 leading-relaxed whitespace-pre font-mono">└─────────────────────────────────────┘</div>
+          <div className="text-green-400/80 leading-relaxed font-mono">&nbsp;</div>
+          <div className="text-green-400/80 leading-relaxed font-mono">{`Type "help" for available commands.`}</div>
 
-          {/* === STATIC CONTENT === you will never understand why i put it here*/}
-          <div className="text-green-400/80 leading-relaxed">{`> System ready.`}</div>
-          <div className="text-yellow-400/90 leading-relaxed">$ hire</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">┌─────────────────────────────────────┐</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">│         WHY YOU SHOULD HIRE ME      │</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">├─────────────────────────────────────┤</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">│ ✓ I ship fast and ship clean        │</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">│ ✓ Full stack — no handoffs needed   │</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">│ ✓ I care about the end user, not    │</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">│   just the code                     │</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">│ ✓ Available now for new projects    │</div>
-          <div className="text-primary/90 leading-relaxed whitespace-pre">└─────────────────────────────────────┘</div>
-          <div className="text-green-400/80 leading-relaxed">&nbsp;</div>
-          <div className="text-green-400/80 leading-relaxed">{`Type "help" for available commands.`}</div>
-
-          {/* === DYNAMIC — user-typed commands === */}
+          {/* User inputs list */}
           {extraLines.map((line, i) => (
-            <div key={i} className={`leading-relaxed whitespace-pre ${
+            <div key={i} className={`leading-relaxed whitespace-pre-wrap font-mono ${
               line.type === 'input'
-                ? 'text-yellow-400/90'
+                ? 'text-yellow-400/95 font-bold'
                 : line.type === 'error'
-                ? 'text-red-400/90'
+                ? 'text-red-400/95 font-semibold'
                 : line.type === 'ascii'
-                ? 'text-primary/90'
+                ? 'text-primary/95'
                 : 'text-green-400/80'
             }`}>
               {line.text || '\u00A0'}
             </div>
           ))}
 
-          {/* Input line */}
-          <div className="flex items-center gap-1 text-yellow-400/90">
+          {/* Input block */}
+          <div className="flex items-center gap-1.5 text-yellow-400/95 mt-1 font-mono">
             <span>$</span>
             <input
               ref={inputRef}
@@ -182,20 +192,19 @@ function RetroTerminal() {
   );
 }
 
-// --- Hero Section ---
 export default function HeroSection() {
   return (
-    <section className="px-6 pt-8 pb-12 relative overflow-hidden">
+    <section className="w-full pt-32 pb-16 mt-6 md:mt-10 relative overflow-hidden">
         {/* Decorative line */}
-        <div className="absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+        <div className="absolute top-20 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12 max-w-5xl mx-auto">
             {/* Left Side — Headline + CTA */}
-            <div className="flex-1">
+            <div className="flex-1 text-left">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-black dark:text-white text-[42px] md:text-[64px] leading-[0.9] font-bold tracking-tighter mix-blend-hard-light mb-4 glitch-text"
+                    className="text-black dark:text-white text-[42px] md:text-[64px] leading-[0.9] font-bold tracking-tighter mix-blend-hard-light mb-4 glitch-text uppercase"
                 >
                     <span className="block hover:translate-x-1 transition-transform duration-75">FULL_STACK</span>
                     <span className="block text-primary drop-shadow-[0_0_8px_rgba(13,223,242,0.6)] pl-8">DEVELOPER_</span>
@@ -209,26 +218,38 @@ export default function HeroSection() {
                 >
                     <p className="text-black/80 dark:text-white/90 text-base md:text-lg leading-relaxed max-w-[500px]">
                         <span className="text-primary font-bold mr-2">&gt;</span>
-                        I build fast, reliable web applications. Taking an idea from a rough concept to a fully functional product is what I do best.
+                        From desktop to android, I've worked in every field. I am Faisal Ahmad Bhat, a Full Stack Developer & AI Engineer based in Jammu & Kashmir (Srinagar & Anantnag). I design and construct highly performant SaaS architectures, Generative AI / LLM workflows, and e-commerce websites.
                     </p>
 
                     <div className="flex items-center gap-4">
                         <a href="#projects" className="w-fit inline-flex items-center gap-2 text-primary text-xs font-bold tracking-widest hover:bg-primary hover:text-white dark:hover:text-black transition-colors group clip-shard-button border border-primary px-6 py-3 bg-slate-100 dark:bg-black/50">
-                            <span >VIEW WORK</span>
+                            <span>VIEW WORK</span>
                             <span className="group-hover:translate-x-1 transition-transform">→</span>
                         </a>
-                      
                     </div>
                 </motion.div>
             </div>
 
-            {/* Right Side — Static Retro Terminal */}
+            {/* Right Side — Glitch Console Terminal */}
             <motion.div
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
+                animate={{ 
+                  opacity: 1, 
+                  y: [0, -6, 0],
+                  scale: 1 
+                }}
+                transition={{
+                  y: {
+                    repeat: Infinity,
+                    repeatType: "mirror" as const,
+                    duration: 5,
+                    ease: "easeInOut"
+                  },
+                  opacity: { duration: 0.5 },
+                  scale: { duration: 0.5 }
+                }}
                 className="w-full md:w-[380px] shrink-0"
-                aria-label="Interactive developer terminal"
+                aria-label="Console Terminal command board"
             >
                 <RetroTerminal />
             </motion.div>

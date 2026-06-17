@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Left Side */}
         <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
           <p className="text-sm font-bold text-black/80 dark:text-white/80">
-            2026 – Made With Acknowledgement of Heart by Faisal Farooq
+            2026 – Made with ❤️ by Faisal Ahmad Bhat | Anantnag, J&K
           </p>
           <div className="flex items-center gap-2 text-xs text-black/40 dark:text-white/40 font-mono">
              <span>{'// END_OF_LINE'}</span>

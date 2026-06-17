@@ -1,10 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Cpu, Code, Database, Server, Cloud, BarChart, LayoutTemplate, Terminal, Layers, Globe, Box, HardDrive, Palette, Triangle, Type, Zap, Container, GitBranch, Github, Activity } from 'lucide-react';
+import { Cpu, Code, Database, Server, Cloud, BarChart, LayoutTemplate, Terminal, Layers, Globe, Box, HardDrive, Palette, Triangle, Type, Zap, Container, GitBranch, Github, Activity, Smartphone, Monitor } from 'lucide-react';
 
 const categories = [
   {
     title: "Frontend & UI",
+    cmd: "ls skills/frontend",
     icon: LayoutTemplate,
     skills: [
       { name: "React", icon: Globe },
@@ -13,13 +14,12 @@ const categories = [
       { name: "React Query", icon: Activity },
       { name: "Tailwind CSS", icon: Palette },
       { name: "Next.js", icon: Triangle },
-      // { name: "HTML", icon: Code },
-      // { name: "CSS", icon: LayoutTemplate },
       { name: "TypeScript", icon: Type },
     ]
   },
   {
     title: "Backend & Core",
+    cmd: "ls skills/backend",
     icon: Server,
     skills: [
       { name: "Node.js", icon: Server },
@@ -31,6 +31,7 @@ const categories = [
   },
   {
     title: "Data & Storage",
+    cmd: "ls skills/database",
     icon: Database,
     skills: [
       { name: "MongoDB", icon: Database },
@@ -41,7 +42,21 @@ const categories = [
     ]
   },
   {
+    title: "Mobile & Desktop",
+    cmd: "ls skills/native",
+    icon: Smartphone,
+    skills: [
+      { name: "Android SDK", icon: Smartphone },
+      { name: "Kotlin", icon: Code },
+      { name: "Java", icon: Server },
+      { name: "Flutter", icon: Globe },
+      { name: "Electron", icon: Monitor },
+      { name: "SQLite", icon: Database },
+    ]
+  },
+  {
     title: "Cloud & DevOps",
+    cmd: "ls skills/devops",
     icon: Cloud,
     skills: [
       { name: "AWS", icon: Cloud },
@@ -54,31 +69,32 @@ const categories = [
     ]
   },
   {
-    title: "Data Science & AI",
-    icon: BarChart,
+    title: "AI & Gen Systems",
+    cmd: "ls skills/ai",
+    icon: Cpu,
     skills: [
-      { name: "Machine Learning", icon: Cpu },
-      { name: "Deep Learning", icon: Cpu },
-      { name: "AI Agents", icon: Terminal },
-      { name: "Data Analysis", icon: BarChart },
-      { name: "Web Scraping", icon: Globe },
+      { name: "Generative AI", icon: Zap },
+      { name: "LLM Integration", icon: Terminal },
+      { name: "RAG Architectures", icon: Database },
+      { name: "AI Agents", icon: Cpu },
+      { name: "Prompt Engineering", icon: Code },
     ]
   }
 ];
 
 export default function SkillsSection() {
   return (
-    <section className="px-6 py-20 relative">
+    <section className="w-full py-20 relative">
+        {/* Horizontal fade-like blue separator */}
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
         <div className="absolute left-0 top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent"></div>
 
         <div className="mb-16 flex items-center gap-4">
-            <div className="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg border border-primary/20">
+            <div className="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg border border-primary/20 shrink-0">
               <Cpu className="text-primary" size={24} />
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-black dark:text-white tracking-tight">Technical <span className="text-primary">Arsenal</span></h2>
-              <p className="text-sm text-black/50 dark:text-white/50 font-mono mt-1">{'// CORE_COMPETENCIES'}</p>
-            </div>
+            <h2 className="text-3xl font-bold text-black dark:text-white tracking-tight uppercase glitch-text shrink-0">Stack</h2>
+            <div className="h-[1px] flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,22 +104,25 @@ export default function SkillsSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: catIndex * 0.1 }}
-                    className="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 hover:border-primary/50 transition-colors shadow-sm hover:shadow-md dark:hover:shadow-neon-sm group"
+                    transition={{ delay: catIndex * 0.05 }}
+                    className="bg-[#080808]/5 dark:bg-slate-950/40 border border-slate-200 dark:border-green-900/20 rounded-lg p-5 hover:border-primary/50 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.01)] dark:shadow-[0_0_20px_rgba(0,255,0,0.01)] hover:shadow-[0_0_25px_rgba(13,223,242,0.08)] group relative overflow-hidden"
                 >
-                    <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
-                        <category.icon className="text-primary" size={20} />
-                        <h3 className="font-bold text-black dark:text-white">{category.title}</h3>
+                    <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100 dark:border-green-900/10">
+                        <div className="flex items-center gap-2">
+                            <category.icon className="text-primary" size={16} />
+                            <h3 className="font-mono text-xs font-semibold text-black/50 dark:text-green-500/40 group-hover:text-primary transition-colors">{category.cmd}</h3>
+                        </div>
+                        <span className="text-[9px] font-mono text-slate-400 dark:text-slate-600 uppercase">{category.title}</span>
                     </div>
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-2">
                         {category.skills.map((skill) => (
                             <div
                                 key={skill.name}
-                                className="flex items-center gap-2 bg-slate-50 dark:bg-slate-800 px-3 py-2 rounded-lg border border-slate-100 dark:border-slate-700 hover:border-primary/30 transition-colors cursor-default"
+                                className="flex items-center gap-1.5 bg-slate-50 dark:bg-[#0a0a0a]/50 px-2.5 py-1.5 rounded border border-slate-200/60 dark:border-green-900/10 hover:border-primary/30 dark:hover:border-primary/40 transition-colors cursor-default"
                             >
-                                <skill.icon size={14} className="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors" />
-                                <span className="text-xs font-mono font-bold text-black/70 dark:text-white/80">{skill.name}</span>
+                                <skill.icon size={12} className="text-slate-400 dark:text-slate-600 group-hover:text-primary transition-colors" />
+                                <span className="text-xs font-mono text-black/80 dark:text-white/90">{skill.name}</span>
                             </div>
                         ))}
                     </div>

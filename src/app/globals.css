@@ -196,3 +196,45 @@
     clip-path: inset(0 0 100% 0) !important;
     opacity: 0 !important;
 }
+
+/* Flowing Neon Gradient Background Animation */
+@keyframes flowing-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.bg-flowing-glow {
+    background: linear-gradient(-45deg, rgba(13, 223, 242, 0.06), rgba(255, 0, 234, 0.06), rgba(0, 255, 128, 0.06), rgba(13, 223, 242, 0.06));
+    background-size: 300% 300%;
+    animation: flowing-gradient 12s ease infinite;
+}
+
+.dark .bg-flowing-glow {
+    background: linear-gradient(-45deg, rgba(13, 223, 242, 0.12), rgba(255, 0, 234, 0.12), rgba(0, 255, 128, 0.12), rgba(13, 223, 242, 0.12));
+    background-size: 300% 300%;
+    animation: flowing-gradient 12s ease infinite;
+}
+
+/* Infinite Scrolling Marquee Ticker */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+
+/* CRT screen flicker animation */
+@keyframes crt-flicker {
+  0% { opacity: 0.985; }
+  50% { opacity: 1; }
+  100% { opacity: 0.99; }
+}
+
+.crt-flicker {
+  animation: crt-flicker 0.2s infinite;
+}
+

@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
@@ -25,26 +26,35 @@ export default function Home() {
                     <div className="w-full h-full bg-hazard-stripes" style={{maskImage: "linear-gradient(-45deg, black 40%, transparent 80%)"}}></div>
                 </div>
 
-                <div className="max-w-5xl mx-auto space-y-24 py-10 relative z-10 scroll-smooth px-4 md:px-0">
+                {/* Main page layout structure */}
+                <div className="py-10 space-y-24 relative z-10 scroll-smooth">
+                    {/* Aligned page container */}
+                    <div className="max-w-5xl mx-auto px-4 md:px-0 space-y-24">
+                        <section id="hero" className="scroll-mt-24">
+                            <HeroSection />
+                        </section>
+                        <section id="about" className="scroll-mt-20">
+                            <AboutSection />
+                        </section>
+                        <section id="projects" className="scroll-mt-24">
+                            <ProjectsSection />
+                        </section>
+                    </div>
 
-                    <section id="hero" className="scroll-mt-24">
-                        <HeroSection />
-                    </section>
-                    <section id="about" className="scroll-mt-20">
-                        <AboutSection />
+                    {/* Edge-to-edge reviews ticker */}
+                    <section id="reviews" className="scroll-mt-24 w-full">
+                        <ReviewsSection />
                     </section>
 
-                    <section id="projects" className="scroll-mt-24">
-                        <ProjectsSection />
-                    </section>
-
-                    <section id="skills" className="scroll-mt-24">
-                        <SkillsSection />
-                    </section>
-
-                    <section id="contact" className="scroll-mt-24">
-                        <ContactSection />
-                    </section>
+                    {/* Aligned page container */}
+                    <div className="max-w-5xl mx-auto px-4 md:px-0 space-y-24">
+                        <section id="skills" className="scroll-mt-24">
+                            <SkillsSection />
+                        </section>
+                        <section id="contact" className="scroll-mt-24">
+                            <ContactSection />
+                        </section>
+                    </div>
                 </div>
              </div>
         </div>

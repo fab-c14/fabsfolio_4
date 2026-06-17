@@ -15,6 +15,38 @@ const projects = [
         icon: ExternalLink
     },
     {
+        id: "expertmatter",
+        title: "EXPERT_MATTER",
+        subtitle: "Consulting & Content Platform",
+        description: "A high-performance B2B content and consulting platform optimized for speed, organic search reach, and smooth user interaction.",
+        image: "/expertmatter.png",
+        link: "https://expertmatter.in",
+        linkText: "VIEW PROJECT",
+        icon: ExternalLink
+    },
+    {
+        id: "aryanlakhani",
+        title: "ARYAN_LAKHANI",
+        subtitle: "Digital Marketer Portfolio",
+        description: "A premium, minimalist portfolio site for a digital marketing consultant, showcasing performance marketing services and campaign outcomes.",
+        image: "/aryanlakhani.png",
+        link: "https://aryanlakhani.com",
+        linkText: "VIEW PROJECT",
+        icon: ExternalLink
+    },
+    /*
+    {
+        id: "fruitwala",
+        title: "FRUITWALA_STORE",
+        subtitle: "E-Commerce Organic Storefront",
+        description: "A vibrant organic fruits e-commerce storefront with a clean, intuitive layout and seamless cart-checkout logic.",
+        image: "/fruitwala.jpg",
+        link: "https://fruitwala-store.vercel.app",
+        linkText: "VIEW PROJECT",
+        icon: ExternalLink
+    },
+    */
+    {
         id: "flame",
         title: "FLAME_EXTENDED",
         subtitle: "Learning Platform",
@@ -48,8 +80,8 @@ const projects = [
 
 export default function ProjectsSection() {
     return (
-        <section className="px-6 space-y-20 relative">
-            <div className="flex items-center gap-4 mb-12">
+        <section className="w-full space-y-6 relative">
+            <div className="flex items-center gap-4 mb-2">
                 <div className="w-12 h-12 bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary clip-shard-1">
                     <FolderOpen size={24} className="text-primary" />
                 </div>
@@ -57,15 +89,15 @@ export default function ProjectsSection() {
                 <div className="h-[1px] flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
             </div>
 
-            <div className="space-y-24">
+            <div className="space-y-10">
                 {projects.map((project, index) => (
                     <motion.div
                         key={project.id}
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.5 }}
-                        className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center`}
+                        transition={{ duration: 0.4 }}
+                        className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-4 md:gap-6 items-center`}
                     >
                         {/* Image Side */}
                         <div className="w-full md:w-3/5 relative group">
@@ -84,13 +116,13 @@ export default function ProjectsSection() {
                         </div>
 
                         {/* Content Side */}
-                        <div className="w-full md:w-2/5 flex flex-col items-start space-y-4">
+                        <div className="w-full md:w-2/5 flex flex-col items-start space-y-2">
                             <div className="flex items-center gap-2">
                                 <span className="text-primary font-bold text-lg">0{index + 1}.</span>
-                                <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                                <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
                             </div>
-                            <span className="text-xs font-mono text-primary/70 uppercase tracking-widest">{project.subtitle}</span>
-                            <p className="text-black/70 dark:text-white/80 leading-relaxed text-sm md:text-base">
+                            <span className="text-[11px] font-mono text-primary/70 uppercase tracking-widest">{project.subtitle}</span>
+                            <p className="text-black/70 dark:text-white/80 leading-relaxed text-xs md:text-sm">
                                 {project.description}
                             </p>
 
@@ -98,7 +130,7 @@ export default function ProjectsSection() {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-4 flex items-center gap-2 text-black dark:text-white font-bold text-sm hover:text-primary transition-colors border-b border-primary/30 hover:border-primary pb-1 group/link"
+                                className="mt-2 flex items-center gap-2 text-black dark:text-white font-bold text-sm hover:text-primary transition-colors border-b border-primary/30 hover:border-primary pb-1 group/link"
                             >
                                 <span>{project.linkText}</span>
                                 <project.icon size={16} className="group-hover/link:translate-x-1 transition-transform" />
