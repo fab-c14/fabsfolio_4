@@ -12,4 +12,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://fabsfolio.me/blog/autonomous-saas</loc>
+    <lastmod>2026-06-24T22:45:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fabsfolio.me/blog/seo-developers</loc>
+    <lastmod>2026-06-24T22:45:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

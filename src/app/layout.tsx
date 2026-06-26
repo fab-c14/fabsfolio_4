@@ -15,7 +15,12 @@ export const metadata: Metadata = {
   description: "Faisal Ahmad Bhat is the best Full Stack Developer and AI Engineer in Jammu and Kashmir (Srinagar & Anantnag). Expert in Generative AI, SaaS, LLM integrations, and custom E-commerce web applications.",
   applicationName: "Faisal Ahmad Bhat Portfolio",
   keywords: [
-    "Faisal Ahmad Bhat", 
+    "Faisal Ahmad Bhat",
+    "Faisal Bhat",
+    "Faisal Ahmad",
+    "Fabsfolio",
+    "fabsfolio.me",
+    "Faisal Ahmad Bhat Portfolio",
     "Best Web Developer in Jammu and Kashmir", 
     "Best Web Developer in Srinagar", 
     "Best Developer in Anantnag", 
@@ -75,9 +80,16 @@ export default function RootLayout({
   const jsonLd = [
     {
       "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fabsfolio",
+      "alternateName": ["fabsfolio", "Faisal Ahmad Bhat Portfolio"],
+      "url": "https://fabsfolio.me"
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Person",
       "name": "Faisal Ahmad Bhat",
-      "alternateName": "Faisal Ahmad",
+      "alternateName": ["Faisal Ahmad", "Faisal Bhat", "Fabsfolio", "Faisal Ahmad Bhat Developer", "Faisal Ahmad Bhat Portfolio"],
       "url": "https://fabsfolio.me",
       "jobTitle": "Full Stack Web Developer & AI Engineer",
       "address": {

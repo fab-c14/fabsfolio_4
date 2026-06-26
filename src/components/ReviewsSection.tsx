@@ -15,13 +15,24 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    id: "review-1",
-    clientName: "Elizabeth M.",
+    id: "review-5",
+    clientName: "Adam D.",
     location: "United States",
     rating: 5.0,
-    projectTitle: "AI Content Editing & Full-Stack Application",
+    projectTitle: "EdTech Developer for Live Deployment Preparation",
+    cost: "$150 USD",
+    date: "6 days ago",
+    feedback: "Great guy to work with. Very helpful and a hardworker. Good job!",
+    skills: ["PHP", "JavaScript", "Software Architecture", "MySQL", "PostgreSQL"]
+  },
+  {
+    id: "review-1",
+    clientName: "Aryan Lakhani.",
+    location: "UAE",
+    rating: 5.0,
+    projectTitle: "Website Designer & Developer ",
     cost: "Verified Contract",
-    date: "Recent",
+    date: "24- June-2026",
     feedback: "Faisal is not just a full-stack web developer — he’s a god sent angel. His creativity truly stands out in his work. As someone who is very detail-oriented and particular about how things should be done, I genuinely appreciate his patience and flexibility. He never once complained about revisions and was always willing to go the extra mile to get everything just right. Two worded summary for him: extraordinary and excellent!",
     skills: ["JavaScript", "Website Design", "HTML", "AI Content Editing"]
   },
