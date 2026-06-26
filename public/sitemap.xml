@@ -13,14 +13,20 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fabsfolio.me/blog/autonomous-saas</loc>
-    <lastmod>2026-06-24T22:45:00+00:00</lastmod>
+    <loc>https://fabsfolio.me/blog/gemini-35-updates</loc>
+    <lastmod>2026-06-26T12:20:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fabsfolio.me/blog/seo-developers</loc>
-    <lastmod>2026-06-24T22:45:00+00:00</lastmod>
+    <loc>https://fabsfolio.me/blog/chatgpt-56-launch</loc>
+    <lastmod>2026-06-26T12:20:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fabsfolio.me/blog/cloudflare-ban-incident</loc>
+    <lastmod>2026-06-26T12:20:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

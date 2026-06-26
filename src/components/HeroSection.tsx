@@ -194,9 +194,9 @@ function RetroTerminal() {
 
 export default function HeroSection() {
   return (
-    <section className="w-full pt-32 pb-16 mt-6 md:mt-10 relative overflow-hidden">
+    <section className="w-full pt-6 pb-12 mt-0 relative overflow-hidden">
         {/* Decorative line */}
-        <div className="absolute top-20 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12 max-w-5xl mx-auto">
             {/* Left Side — Headline + CTA */}
@@ -218,7 +218,7 @@ export default function HeroSection() {
                 >
                     <p className="text-black/80 dark:text-white/90 text-base md:text-lg leading-relaxed max-w-[500px]">
                         <span className="text-primary font-bold mr-2">&gt;</span>
-                        From desktop to android, I've worked in every field. I am Faisal Ahmad Bhat, a Full Stack Developer & AI Engineer based in Jammu & Kashmir (Srinagar & Anantnag). I design and construct highly performant SaaS architectures, Generative AI / LLM workflows, and e-commerce websites.
+                        From desktop to android, I've worked in every field. I am Faisal Ahmad Bhat (known online as Fab, Fabsfolio, or Fabfolio), a Full Stack Developer & AI Engineer based in Jammu & Kashmir (Srinagar & Anantnag). I design and construct highly performant SaaS architectures, Generative AI / LLM workflows, and e-commerce websites.
                     </p>
 
                     <div className="flex items-center gap-4">

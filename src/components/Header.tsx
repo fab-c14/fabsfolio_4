@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Terminal, Cpu, User, Mail, FolderOpen, MessageSquare, BookOpen, Sun, Moon } from 'lucide-react';
+import { Menu, X, Terminal, Cpu, User, Mail, FolderOpen, MessageSquare, BookOpen, Sun, Moon, Layers } from 'lucide-react';
 import { useTheme } from '@/components/ThemeContext';
 
 const NavLink = ({ href, label, icon: Icon, onClick }: { href: string; label: string; icon: React.ElementType; onClick?: () => void }) => {
@@ -71,6 +71,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-0.5">
             <NavLink href="#hero" label="Home" icon={Terminal} />
             <NavLink href="#projects" label="Work" icon={FolderOpen} />
+            <NavLink href="#services" label="Services" icon={Layers} />
             <NavLink href="#reviews" label="Reviews" icon={MessageSquare} />
             <NavLink href="#skills" label="Stack" icon={Cpu} />
             <NavLink href="/blog" label="Blog" icon={BookOpen} />
@@ -108,6 +109,7 @@ const Header = () => {
           >
             <NavLink href="#hero" label="Home" icon={Terminal} onClick={() => setIsOpen(false)} />
             <NavLink href="#projects" label="Work" icon={FolderOpen} onClick={() => setIsOpen(false)} />
+            <NavLink href="#services" label="Services" icon={Layers} onClick={() => setIsOpen(false)} />
             <NavLink href="#reviews" label="Reviews" icon={MessageSquare} onClick={() => setIsOpen(false)} />
             <NavLink href="#skills" label="Stack" icon={Cpu} onClick={() => setIsOpen(false)} />
             <NavLink href="/blog" label="Blog" icon={BookOpen} onClick={() => setIsOpen(false)} />

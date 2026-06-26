@@ -25,6 +25,26 @@ const projects = [
         icon: ExternalLink
     },
     {
+        id: "britishenglishacademy",
+        title: "BRITISH_ENGLISH_ACADEMY",
+        subtitle: "Interactive Language Learning Platform",
+        description: "A comprehensive English learning system featuring interactive level testing, course previews, and learning pathways. Custom built for international client (Adam D.) with Next.js, and deployed on a custom DigitalOcean droplet.",
+        image: "/britishenglishacademy.png",
+        link: "https://britishenglishacademy.co.uk",
+        linkText: "VIEW PROJECT",
+        icon: ExternalLink
+    },
+    {
+        id: "fruitwala_ae",
+        title: "FRUITWALA_AE",
+        subtitle: "E-Commerce Organic Storefront (Dubai)",
+        description: "Premium e-commerce platform for ordering fresh organic fruits and cold-pressed juices in Dubai. Integrated with regional payment options, cart workflows, and high-performance speed optimization. Valued at 17,000 AED.",
+        image: "/fruitwala_ae.png",
+        link: "https://fruitwala.ae",
+        linkText: "VIEW PROJECT",
+        icon: ExternalLink
+    },
+    {
         id: "aryanlakhani",
         title: "ARYAN_LAKHANI",
         subtitle: "Digital Marketer Portfolio",
@@ -33,28 +53,6 @@ const projects = [
         link: "https://aryanlakhani.com",
         linkText: "VIEW PROJECT",
         icon: ExternalLink
-    },
-    /*
-    {
-        id: "fruitwala",
-        title: "FRUITWALA_STORE",
-        subtitle: "E-Commerce Organic Storefront",
-        description: "A vibrant organic fruits e-commerce storefront with a clean, intuitive layout and seamless cart-checkout logic.",
-        image: "/fruitwala.jpg",
-        link: "https://fruitwala-store.vercel.app",
-        linkText: "VIEW PROJECT",
-        icon: ExternalLink
-    },
-    */
-    {
-        id: "flame",
-        title: "FLAME_EXTENDED",
-        subtitle: "Learning Platform",
-        description: "Comprehensive educational platform designed to streamline learning processes. Build projects, practice algorithms, and prepare for technical interviews -designed for college coursework and lab assignments with instant feedback and powerful analytics.",
-        image: "/flame.png",
-        link: "https://github.com/fab-c14/FLAME",
-        linkText: "SOURCE CODE",
-        icon: Code
     },
     {
         id: "pintoinbox",

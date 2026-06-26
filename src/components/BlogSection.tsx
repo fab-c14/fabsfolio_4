@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { BookOpen, Calendar, Clock, FileText } from 'lucide-react';
 import { blogPosts } from '@/data/blogPosts';
@@ -30,11 +31,22 @@ export default function BlogSection() {
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-md dark:hover:shadow-neon-sm flex flex-col justify-between group"
+              className="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5 hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-md dark:hover:shadow-neon-sm flex flex-col justify-between group overflow-hidden"
             >
               <div>
+                {/* Blog Image */}
+                <div className="relative aspect-video w-full mb-4 overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800/80 bg-slate-100 dark:bg-slate-950">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
                 {/* Meta Info */}
-                <div className="flex items-center gap-4 text-xs font-mono text-black/50 dark:text-white/50 mb-3">
+                <div className="flex items-center gap-4 text-[10px] font-mono text-black/50 dark:text-white/50 mb-3">
                   <div className="flex items-center gap-1">
                     <Calendar size={12} />
                     <span>{post.date}</span>
@@ -46,12 +58,12 @@ export default function BlogSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-black dark:text-white mb-3 group-hover:text-primary transition-colors duration-200">
+                <h3 className="text-lg font-bold text-black dark:text-white mb-2.5 group-hover:text-primary transition-colors duration-200 line-clamp-2">
                   {post.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-sm text-black/70 dark:text-white/80 leading-relaxed mb-6">
+                <p className="text-xs md:text-sm text-black/70 dark:text-white/80 leading-relaxed mb-6 line-clamp-3">
                   {post.excerpt}
                 </p>
               </div>

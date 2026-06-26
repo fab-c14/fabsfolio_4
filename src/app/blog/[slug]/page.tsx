@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, Clock, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -126,8 +127,20 @@ export default async function BlogPostPage({ params }: PageProps) {
                       </div>
                     </div>
 
+                    {/* Blog Image */}
+                    <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-green-900/20 bg-slate-950">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 800px"
+                        priority
+                        className="object-cover opacity-80"
+                      />
+                    </div>
+
                     {/* Article Header */}
-                    <h1 className="text-xl md:text-3xl font-bold text-primary tracking-tight leading-tight uppercase font-mono">
+                    <h1 className="text-xl md:text-3xl font-bold text-primary tracking-tight leading-tight uppercase font-mono pt-2">
                       {post.title}
                     </h1>
 

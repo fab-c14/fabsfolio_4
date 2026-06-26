@@ -20,7 +20,16 @@ export const metadata: Metadata = {
     "Faisal Ahmad",
     "Fabsfolio",
     "fabsfolio.me",
+    "fab",
+    "fabfolio",
+    "faisal ahmad bhat fab",
+    "fab developer",
     "Faisal Ahmad Bhat Portfolio",
+    "Faisal Ahmad Bhat pricing",
+    "Faisal Ahmad Bhat services",
+    "Web Developer pricing packages",
+    "Freelance Web Development costs",
+    "SaaS Developer packages",
     "Best Web Developer in Jammu and Kashmir", 
     "Best Web Developer in Srinagar", 
     "Best Developer in Anantnag", 
@@ -89,7 +98,7 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Faisal Ahmad Bhat",
-      "alternateName": ["Faisal Ahmad", "Faisal Bhat", "Fabsfolio", "Faisal Ahmad Bhat Developer", "Faisal Ahmad Bhat Portfolio"],
+      "alternateName": ["Faisal Ahmad", "Faisal Bhat", "Fabsfolio", "fab", "fabfolio", "faisal ahmad bhat fab", "fab-c14", "Faisal Ahmad Bhat Developer", "Faisal Ahmad Bhat Portfolio"],
       "url": "https://fabsfolio.me",
       "jobTitle": "Full Stack Web Developer & AI Engineer",
       "address": {
@@ -169,7 +178,52 @@ export default function RootLayout({
           "name": "Anantnag"
         }
       ],
-      "description": "Faisal Ahmad Bhat offers the best freelance full stack web development and AI engineering services in Jammu and Kashmir. Specialized in Next.js, Gen AI integration, custom LLM solutions, SaaS, and E-commerce websites."
+      "description": "Faisal Ahmad Bhat offers the best freelance full stack web development and AI engineering services in Jammu and Kashmir. Specialized in Next.js, Gen AI integration, custom LLM solutions, SaaS, and E-commerce websites.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Freelance Web Development & Marketing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Basic Portfolio Package",
+              "description": "Custom single-page landing website built with Next.js, optimized for high speed, Core Web Vitals, and local SEO."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "1000",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Advanced SaaS Package",
+              "description": "Full-stack multi-page application featuring secure user auth, database integrations, dashboard, and customized VPS deployment."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "2500",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enterprise AI & Growth Suite",
+              "description": "Premium full-stack software integrated with custom LLMs, RAG pipelines, advanced tracking analytics, conversion copywriting, and Cloudflare DDoS shielding."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "5000",
+              "priceCurrency": "USD"
+            }
+          }
+        ]
+      }
     }
   ];
 
