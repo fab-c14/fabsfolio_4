@@ -59,8 +59,36 @@ export default function AboutSection() {
                 </div>
 
                 <p className="max-w-2xl border-l-2 border-primary/50 pl-5 py-3 leading-relaxed text-base text-black/80 dark:text-white/85">
-                    Based in Jammu and Kashmir (Srinagar & Anantnag), I design and construct highly performant software systems from scratch. From desktop to android, I've worked in every field. I specialize in full-stack architecture (Next.js, Node.js, databases) combined with state-of-the-art AI technologies, building custom SaaS products, native mobile applications, e-commerce storefronts, and advanced LLM & generative AI integrations.
+                    Based in Jammu and Kashmir (Srinagar & Anantnag), I design and construct highly performant software systems from scratch. I have extensive experience building high-traffic websites, robust native desktop applications, scalable API infrastructures, and generative AI features.
                 </p>
+
+                {/* Core Expertise Fields */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl text-xs font-mono select-none">
+                  <div className="bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-slate-800/80 p-3.5 rounded-lg hover:border-primary/45 transition-colors">
+                    <p className="text-primary font-bold uppercase tracking-wider mb-1.5">// WEBSITES & E-COMMERCE</p>
+                    <p className="text-black/70 dark:text-white/75 leading-relaxed">
+                      Custom responsive landing pages, online education academies, and high-performance organic e-commerce storefronts built with Next.js and React.
+                    </p>
+                  </div>
+                  <div className="bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-slate-800/80 p-3.5 rounded-lg hover:border-primary/45 transition-colors">
+                    <p className="text-primary font-bold uppercase tracking-wider mb-1.5">// DESKTOP APPLICATIONS</p>
+                    <p className="text-black/70 dark:text-white/75 leading-relaxed">
+                      Native multi-platform desktop apps built on Electron, Tauri, and Python with local databases and system-level system scripts.
+                    </p>
+                  </div>
+                  <div className="bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-slate-800/80 p-3.5 rounded-lg hover:border-primary/45 transition-colors">
+                    <p className="text-primary font-bold uppercase tracking-wider mb-1.5">// API & DB ENGINEERING</p>
+                    <p className="text-black/70 dark:text-white/75 leading-relaxed">
+                      RESTful and GraphQL backend APIs built on Node.js, Express, and FastAPI with robust PostgreSQL, MongoDB, and Redis setups.
+                    </p>
+                  </div>
+                  <div className="bg-slate-50 dark:bg-black/30 border border-slate-200 dark:border-slate-800/80 p-3.5 rounded-lg hover:border-primary/45 transition-colors">
+                    <p className="text-primary font-bold uppercase tracking-wider mb-1.5">// GENERATIVE AI & RAG</p>
+                    <p className="text-black/70 dark:text-white/75 leading-relaxed">
+                      Custom LLM agents (ChatGPT, Gemini APIs), vector storage search systems, and self-correcting autonomous agent workflows.
+                    </p>
+                  </div>
+                </div>
 
                 {/* Social Links */}
                 <div className="flex items-center gap-1.5">
