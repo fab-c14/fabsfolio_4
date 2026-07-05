@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fabsfolio.me/</loc>
+    <loc>https://www.fabsfolio.me/</loc>
     <lastmod>2026-06-17T22:58:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fabsfolio.me/blog</loc>
+    <loc>https://www.fabsfolio.me/blog</loc>
     <lastmod>2026-06-17T22:58:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fabsfolio.me/blog/gemini-35-updates</loc>
+    <loc>https://www.fabsfolio.me/blog/gemini-35-updates</loc>
     <lastmod>2026-06-26T12:20:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fabsfolio.me/blog/chatgpt-56-launch</loc>
+    <loc>https://www.fabsfolio.me/blog/chatgpt-56-launch</loc>
     <lastmod>2026-06-26T12:20:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fabsfolio.me/blog/cloudflare-ban-incident</loc>
+    <loc>https://www.fabsfolio.me/blog/cloudflare-ban-incident</loc>
     <lastmod>2026-06-26T12:20:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

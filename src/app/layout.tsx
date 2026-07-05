@@ -10,9 +10,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fabsfolio.me"),
+  metadataBase: new URL("https://www.fabsfolio.me"),
   title: "Faisal Ahmad Bhat | Best Full Stack Developer & AI Engineer in Jammu and Kashmir",
-  description: "Faisal Ahmad Bhat is the best Full Stack Developer and AI Engineer in Jammu and Kashmir (Srinagar & Anantnag). Expert in Generative AI, SaaS, LLM integrations, and custom E-commerce web applications.",
+  description: "Faisal Ahmad Bhat is the best Full Stack Developer and AI Engineer in Jammu and Kashmir (Srinagar). Expert in Generative AI, SaaS, LLM integrations, and custom E-commerce web applications.",
   applicationName: "Faisal Ahmad Bhat Portfolio",
   keywords: [
     "Faisal Ahmad Bhat",
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     "SaaS Developer packages",
     "Best Web Developer in Jammu and Kashmir", 
     "Best Web Developer in Srinagar", 
-    "Best Developer in Anantnag", 
+    "Best Developer in Srinagar, J&K", 
     "Full Stack Developer Jammu and Kashmir", 
     "AI Engineer Jammu and Kashmir", 
     "Generative AI Developer Srinagar", 
-    "SaaS Developer Anantnag",
+    "SaaS Developer Srinagar",
     "Next.js Developer Srinagar",
     "Freelance Web Developer Jammu and Kashmir"
   ],
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://fabsfolio.me",
+    url: "https://www.fabsfolio.me",
     title: "Faisal Ahmad Bhat | Best Full Stack Developer & AI Engineer in Jammu and Kashmir",
-    description: "Top-rated Full Stack Developer & AI Engineer based in Jammu and Kashmir, Srinagar, and Anantnag. Building high-performance, secure, and scalable web applications.",
+    description: "Top-rated Full Stack Developer & AI Engineer based in Srinagar, Jammu and Kashmir. Building high-performance, secure, and scalable web applications.",
     siteName: "Faisal Ahmad Bhat Portfolio",
     locale: "en_US",
   },
@@ -92,18 +92,18 @@ export default function RootLayout({
       "@type": "WebSite",
       "name": "Fabsfolio",
       "alternateName": ["fabsfolio", "Faisal Ahmad Bhat Portfolio"],
-      "url": "https://fabsfolio.me"
+      "url": "https://www.fabsfolio.me"
     },
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Faisal Ahmad Bhat",
       "alternateName": ["Faisal Ahmad", "Faisal Bhat", "Fabsfolio", "fab", "fabfolio", "faisal ahmad bhat fab", "fab-c14", "Faisal Ahmad Bhat Developer", "Faisal Ahmad Bhat Portfolio"],
-      "url": "https://fabsfolio.me",
+      "url": "https://www.fabsfolio.me",
       "jobTitle": "Full Stack Web Developer & AI Engineer",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Anantnag",
+        "addressLocality": "Srinagar",
         "addressRegion": "Jammu and Kashmir",
         "addressCountry": "India"
       },
@@ -119,7 +119,7 @@ export default function RootLayout({
         "Node.js",
         "Search Engine Optimization (SEO)"
       ],
-      "description": "Faisal Ahmad Bhat is the premier Full Stack Developer and AI Engineer in Jammu and Kashmir, Srinagar, and Anantnag. He specializes in SaaS development, generative AI integrations, LLM workflows, and custom e-commerce sites.",
+      "description": "Faisal Ahmad Bhat is the premier Full Stack Developer and AI Engineer in Srinagar, Jammu and Kashmir. He specializes in SaaS development, generative AI integrations, LLM workflows, and custom e-commerce sites.",
       "sameAs": [
         "https://github.com/fab-c14",
         "https://www.linkedin.com/in/faisal-ahmad-bhat-aaba29229",
@@ -130,21 +130,21 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Faisal Ahmad Bhat - Freelance Web Developer & AI Engineer",
-      "image": "https://fabsfolio.me/profile.png",
-      "@id": "https://fabsfolio.me/#service",
-      "url": "https://fabsfolio.me",
+      "image": "https://www.fabsfolio.me/profile.png",
+      "@id": "https://www.fabsfolio.me/#service",
+      "url": "https://www.fabsfolio.me",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Anantnag",
+        "addressLocality": "Srinagar",
         "addressRegion": "Jammu and Kashmir",
-        "postalCode": "192101",
+        "postalCode": "190001",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "33.7297",
-        "longitude": "75.1498"
+        "latitude": "34.0837",
+        "longitude": "74.7973"
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -172,10 +172,6 @@ export default function RootLayout({
         {
           "@type": "AdministrativeArea",
           "name": "Srinagar"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Anantnag"
         }
       ],
       "description": "Faisal Ahmad Bhat offers the best freelance full stack web development and AI engineering services in Jammu and Kashmir. Specialized in Next.js, Gen AI integration, custom LLM solutions, SaaS, and E-commerce websites.",

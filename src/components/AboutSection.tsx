@@ -59,7 +59,7 @@ export default function AboutSection() {
                 </div>
 
                 <p className="max-w-2xl border-l-2 border-primary/50 pl-5 py-3 leading-relaxed text-base text-black/80 dark:text-white/85">
-                    Based in Jammu and Kashmir (Srinagar & Anantnag), I design and construct highly performant software systems from scratch. I have extensive experience building high-traffic websites, robust native desktop applications, scalable API infrastructures, and generative AI features.
+                    Based in Srinagar, Jammu and Kashmir, I design and construct highly performant software systems from scratch. I have extensive experience building high-traffic websites, robust native desktop applications, scalable API infrastructures, and generative AI features.
                 </p>
 
                 {/* Core Expertise Fields */}
