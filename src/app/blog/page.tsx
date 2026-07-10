@@ -6,16 +6,28 @@ import BlogSection from "@/components/BlogSection";
 export const metadata: Metadata = {
   title: "Engineering Blog | Faisal Ahmad Bhat | Full Stack Developer",
   description: "Read technical articles by Faisal Ahmad Bhat on building autonomous SaaS, local SEO architectures, custom LLM integrations, and web performance optimization.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "Engineering Blog | Faisal Ahmad Bhat",
     description: "Deep-dives into software architecture, Generative AI engineering, and full-stack development by Faisal Ahmad Bhat.",
-    url: "https://fabsfolio.me/blog",
+    url: "https://www.fabsfolio.me/blog",
     type: "website",
+    images: [
+      {
+        url: "https://www.fabsfolio.me/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Engineering Blog | Faisal Ahmad Bhat",
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Engineering Blog | Faisal Ahmad Bhat",
     description: "Deep-dives into software architecture, Generative AI engineering, and full-stack development by Faisal Ahmad Bhat.",
+    images: ["https://www.fabsfolio.me/profile.png"],
   }
 };
 

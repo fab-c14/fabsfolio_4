@@ -218,7 +218,7 @@ export default function HeroSection() {
                 >
                     <p className="text-black/80 dark:text-white/90 text-base md:text-lg leading-relaxed max-w-[500px]">
                         <span className="text-primary font-bold mr-2">&gt;</span>
-                        From desktop to android, I've worked in every field. I am Faisal Ahmad Bhat (known online as Fab, Fabsfolio, or Fabfolio), a Full Stack Developer & AI Engineer based in Srinagar, Jammu & Kashmir. I design and construct highly performant SaaS architectures, Generative AI / LLM workflows, and e-commerce websites.
+                        From desktop to android, I've worked in every field. I am Faisal Ahmad Bhat, a Full Stack Developer & AI Engineer based in Srinagar, Jammu & Kashmir. I design and construct highly performant SaaS architectures, Generative AI / LLM workflows, and e-commerce websites.
                     </p>
 
                     <div className="flex items-center gap-4">

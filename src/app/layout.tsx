@@ -40,10 +40,13 @@ export const metadata: Metadata = {
     "Next.js Developer Srinagar",
     "Freelance Web Developer Jammu and Kashmir"
   ],
-  authors: [{ name: "Faisal Ahmad Bhat", url: "https://fabsfolio.me" }],
+  authors: [{ name: "Faisal Ahmad Bhat", url: "https://www.fabsfolio.me" }],
   creator: "Faisal Ahmad Bhat",
   publisher: "Faisal Ahmad Bhat",
   generator: "Next.js",
+  alternates: {
+    canonical: "/",
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -56,12 +59,21 @@ export const metadata: Metadata = {
     description: "Top-rated Full Stack Developer & AI Engineer based in Srinagar, Jammu and Kashmir. Building high-performance, secure, and scalable web applications.",
     siteName: "Faisal Ahmad Bhat Portfolio",
     locale: "en_US",
+    images: [
+      {
+        url: "https://www.fabsfolio.me/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Faisal Ahmad Bhat - Full Stack Developer & AI Engineer",
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Faisal Ahmad Bhat | Best Full Stack Developer & AI Engineer in Jammu and Kashmir",
     description: "Top-rated Full Stack Developer & AI Engineer based in Jammu & Kashmir. Specialized in Gen AI, custom LLMs, SaaS, and E-commerce.",
     creator: "@fab_c14",
+    images: ["https://www.fabsfolio.me/profile.png"],
   },
   icons: {
     icon: '/favicon.svg',
